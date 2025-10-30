@@ -17,10 +17,13 @@
 
 SELECT F.FLAVOR
 FROM FIRST_HALF F JOIN ICECREAM_INFO I ON F.FLAVOR = I.FLAVOR
-WHERE F.TOTAL_ORDER >= 3000 AND I.INGREDIENT_TYPE = 'fruit_based'
+WHERE F.TOTAL_ORDER > 3000 AND I.INGREDIENT_TYPE = 'fruit_based'
 ORDER BY F.TOTAL_ORDER DESC;
 
 /*
 Oracle JOIN의 경우
 기존 테이블 JOIN 합치려는 테이블 ON 기존테이블.공통키 = 합치려는테이블.공통키
 */
+
+
+-- 수정1+ 기존 WHERE F.TOTAL_ORDER >= 3000 로 작업하였으나 다시 확인해보니 3000보다 높다. 이기 때문에 >3000으로 수정하여 3000이 포함되지 않도록 재작성함
